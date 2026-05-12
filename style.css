@@ -111,133 +111,125 @@ nav a:hover {
   color: black;
 }
 
-/* Sections */
-.section {
-  padding: 120px 10%;
-}
+/* =========================
+   SECTION HEADINGS
+========================= */
 
 .section h2 {
-  font-size: 42px;
-  margin-bottom: 40px;
+  font-size: 48px;
+  margin-bottom: 50px;
   color: #fdc023;
+  font-weight: 700;
 }
 
-.section p {
-  max-width: 800px;
-  color: #d1d1d1;
-}
+/* =========================
+   PROJECTS GRID
+========================= */
 
-/* Services */
-
-.services-grid {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
 
-.card {
-  background: linear-gradient(145deg, #111, #0a0a0a);
-  padding: 35px;
-  border-radius: 24px;
-  border: 1px solid #1d1d1d;
-  transition: 0.4s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  border-color: #fdc023;
-  box-shadow: 0 0 30px rgba(253, 192, 35, 0.15);
-}
-
-.card h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: white;
-}
-
-.card p {
-  color: #cfcfcf;
-  line-height: 1.7;
-}
-
-/* Projects */
+/* =========================
+   PROJECT CARD
+========================= */
 
 .project-card {
   background: linear-gradient(145deg, #111, #0a0a0a);
   padding: 35px;
-  border-radius: 26px;
+  border-radius: 24px;
   border: 1px solid #1d1d1d;
-  transition: 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  min-height: 320px;
+
+  transition: all 0.4s ease;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media (max-width: 992px) {
 
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-.project-card {
-  background: linear-gradient(145deg, #111, #0a0a0a);
-  padding: 40px;
-  border-radius: 24px;
-  border: 1px solid #1d1d1d;
-  transition: 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  min-height: 320px;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   border-color: #fdc023;
-  box-shadow: 0 0 30px rgba(253, 192, 35, 0.12);
+
+  box-shadow: 0 0 25px rgba(253, 192, 35, 0.12);
 }
+
+/* =========================
+   PROJECT TAG
+========================= */
 
 .project-tag {
   display: inline-block;
   align-self: flex-start;
 
   padding: 8px 16px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   border-radius: 50px;
 
   background: rgba(253, 192, 35, 0.08);
-  border: 1px solid rgba(253, 192, 35, 0.18);
+  border: 1px solid rgba(253, 192, 35, 0.15);
 
   color: #fdc023;
+
   font-size: 12px;
   letter-spacing: 1px;
 }
 
+/* =========================
+   PROJECT TITLE
+========================= */
+
 .project-card h3 {
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 20px;
   color: white;
 }
 
+/* =========================
+   PROJECT DESCRIPTION
+========================= */
+
 .project-card p {
   color: #bdbdbd;
-  line-height: 1.8;
   font-size: 15px;
+  line-height: 1.8;
+
   margin-bottom: 35px;
+}
+
+/* =========================
+   PROJECT LINK
+========================= */
+
+.project-link {
+  color: #fdc023;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.project-link:hover {
+  letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media (max-width: 768px) {
