@@ -127,34 +127,63 @@ nav a:hover {
   color: #d1d1d1;
 }
 
-/* Services & Projects */
-.services-grid,
+/* Projects */
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
 
-.card,
 .project-card {
-  background: #111;
-  padding: 35px;
-  border-radius: 20px;
-  transition: 0.3s;
+  background: linear-gradient(145deg, #111, #0a0a0a);
+  padding: 40px;
+  border-radius: 24px;
   border: 1px solid #1d1d1d;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover,
 .project-card:hover {
   transform: translateY(-10px);
   border-color: #fdc023;
+  box-shadow: 0 0 30px rgba(253, 192, 35, 0.15);
 }
 
-.card h3,
+.project-tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: rgba(253, 192, 35, 0.12);
+  border: 1px solid rgba(253, 192, 35, 0.25);
+  border-radius: 50px;
+  color: #fdc023;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
 .project-card h3 {
-  margin-bottom: 15px;
-  color: white;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.project-card p {
+  color: #cfcfcf;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.project-link {
+  color: #fdc023;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-link:hover {
+  letter-spacing: 1px;
 }
 
 /* Contact */
