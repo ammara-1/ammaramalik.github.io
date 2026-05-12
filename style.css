@@ -163,11 +163,19 @@ nav a:hover {
 
 /* Projects */
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 50px;
+.project-card {
+  background: linear-gradient(145deg, #111, #0a0a0a);
+  padding: 40px;
+  border-radius: 28px;
+  border: 1px solid #1d1d1d;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 992px) {
@@ -215,14 +223,24 @@ nav a:hover {
 }
 
 .project-card h3 {
-  font-size: 28px;
-  margin-bottom: 18px;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .project-card p {
   color: #cfcfcf;
-  margin-bottom: 30px;
-  line-height: 1.7;
+  margin-bottom: 35px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 .project-link {
