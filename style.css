@@ -32,7 +32,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 25px 10%;
+  padding: 24px 10%;
 
   position: sticky;
   top: 0;
@@ -41,6 +41,8 @@ header {
   backdrop-filter: blur(12px);
 
   z-index: 1000;
+
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .logo {
@@ -56,6 +58,8 @@ nav {
 }
 
 nav a {
+  position: relative;
+
   color: white;
   text-decoration: none;
 
@@ -69,11 +73,32 @@ nav a:hover {
   color: #fdc023;
 }
 
+nav a::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #fdc023;
+
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
 /* =========================
    HERO SECTION
 ========================= */
 
 .hero {
+  position: relative;
+
   min-height: 72vh;
 
   display: flex;
@@ -83,6 +108,23 @@ nav a:hover {
   text-align: center;
 
   padding: 0 10%;
+
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(253,192,35,0.06);
+
+  filter: blur(120px);
+
+  z-index: -1;
 }
 
 .hero-content {
@@ -150,11 +192,14 @@ nav a:hover {
 .primary-btn {
   background: #fdc023;
   color: black;
+
+  box-shadow: 0 0 20px rgba(253,192,35,0.18);
 }
 
 .primary-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(253,192,35,0.3);
+
+  box-shadow: 0 0 28px rgba(253,192,35,0.28);
 }
 
 .secondary-btn {
@@ -173,10 +218,13 @@ nav a:hover {
 
 .section {
   padding: 80px 10%;
+
+  border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 .section h2 {
   font-size: 42px;
+
   margin-bottom: 35px;
 
   color: #fdc023;
@@ -185,8 +233,16 @@ nav a:hover {
 
 .section p {
   color: #cfcfcf;
-  max-width: 800px;
   line-height: 1.8;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+#about p {
+  max-width: 700px;
+  font-size: 17px;
 }
 
 /* =========================
@@ -198,7 +254,7 @@ nav a:hover {
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 24px;
+  gap: 28px;
 
   margin-top: 50px;
 }
@@ -206,7 +262,7 @@ nav a:hover {
 .card {
   background: linear-gradient(145deg, #111, #0a0a0a);
 
-  padding: 32px;
+  padding: 36px;
 
   border-radius: 24px;
 
@@ -225,12 +281,15 @@ nav a:hover {
 
 .card h3 {
   font-size: 24px;
+
   margin-bottom: 18px;
 }
 
 .card p {
   color: #bdbdbd;
+
   line-height: 1.8;
+
   font-size: 15px;
 }
 
@@ -295,7 +354,8 @@ nav a:hover {
 }
 
 .project-card h3 {
-  font-size: 28px;
+  font-size: 24px;
+
   line-height: 1.3;
 
   margin-bottom: 18px;
@@ -326,7 +386,7 @@ nav a:hover {
 }
 
 /* =========================
-   CONTACT SECTION
+   CONTACT
 ========================= */
 
 .contact-section {
@@ -334,6 +394,8 @@ nav a:hover {
 }
 
 .contact-section p {
+  max-width: 700px;
+
   margin: 20px auto 35px;
 }
 
@@ -346,8 +408,6 @@ footer {
 
   padding: 40px;
 
-  border-top: 1px solid #1d1d1d;
-
   color: #888;
 }
 
@@ -358,7 +418,7 @@ footer {
 @media (max-width: 1100px) {
 
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .projects-grid {
@@ -376,12 +436,14 @@ footer {
 
   nav {
     gap: 18px;
+
     flex-wrap: wrap;
+
     justify-content: center;
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 46px;
   }
 
   .description {
@@ -396,10 +458,7 @@ footer {
     font-size: 34px;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .services-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
