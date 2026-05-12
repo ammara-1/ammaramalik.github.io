@@ -74,7 +74,7 @@ nav a:hover {
 ========================= */
 
 .hero {
-  min-height: 85vh;
+  min-height: 72vh;
 
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 72px;
+  font-size: 64px;
   line-height: 1.08;
 
   margin-bottom: 28px;
@@ -196,7 +196,7 @@ nav a:hover {
 .services-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 24px;
 
@@ -251,7 +251,7 @@ nav a:hover {
 .project-card {
   background: linear-gradient(145deg, #111, #0a0a0a);
 
-  padding: 36px;
+  padding: 42px;
 
   border-radius: 26px;
 
