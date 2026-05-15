@@ -313,7 +313,7 @@ nav a:hover::after {
 
   transition: 0.4s ease;
 
-  min-height: 200px;
+  min-height: 205px;
 
   display: flex;
   flex-direction: column;
