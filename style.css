@@ -331,7 +331,10 @@ nav a:hover::after {
 .card h3 {
   font-size: 24px;
 
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+.card p {
+  margin-top: 0;
 }
 
 .card p {
