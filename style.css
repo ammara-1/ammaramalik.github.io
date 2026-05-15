@@ -573,12 +573,13 @@ footer {
 
 /* Footer Text */
 
-.footer-container p {
+.footer-text {
   color: #8d8d8d;
 
   font-size: 14px;
-}
 
+  margin: 0;
+}
 
 
 
