@@ -255,6 +255,8 @@ nav a:hover::after {
 
   color: #fdc023;
   font-weight: 700;
+
+  text-align: center;
 }
 
 .section p {
@@ -263,17 +265,23 @@ nav a:hover::after {
 }
 
 /* =========================
-   ABOUT
+   ABOUT SECTION
 ========================= */
+
+#about {
+  text-align: center;
+}
 
 #about p {
   max-width: 700px;
-  font-size: 17px;
-}
 
-#about,
-.contact-section {
-  text-align: center;
+  margin: 0 auto;
+
+  font-size: 17px;
+
+  color: #cfcfcf;
+
+  line-height: 1.8;
 }
 
 /* =========================
