@@ -489,15 +489,39 @@ nav a:hover::after {
    FOOTER SOCIALS
 ========================= */
 
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 28px 8%;
+
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Footer Container */
+
+.footer-container {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================
+   FOOTER SOCIALS
+========================= */
+
 .footer-socials {
   display: flex;
 
-  justify-content: center;
   align-items: center;
 
   gap: 14px;
-
-  margin-bottom: 26px;
 
   flex-wrap: wrap;
 }
@@ -505,7 +529,7 @@ nav a:hover::after {
 .footer-socials span {
   color: #bdbdbd;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 
   margin-right: 6px;
@@ -547,21 +571,18 @@ nav a:hover::after {
   0 0 18px rgba(253,192,35,0.10);
 }
 
+/* Footer Text */
 
+.footer-container p {
+  color: #8d8d8d;
 
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  text-align: center;
-
-  padding: 28px 20px;
-
-  color: #777;
-
-  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 14px;
 }
+
+
+
+
+
 
 /* =========================
    RESPONSIVE DESIGN
@@ -619,5 +640,10 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+   .footer-container {
+  flex-direction: column;
+
+  text-align: center;
+}
 
 }
