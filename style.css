@@ -32,12 +32,15 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 24px 8%;
+  width: 100%;
+
+  padding: 18px 8%;
 
   position: sticky;
   top: 0;
 
-  background: rgba(0,0,0,0.92);
+  background: rgba(0,0,0,0.90);
+
   backdrop-filter: blur(12px);
 
   z-index: 1000;
@@ -52,35 +55,26 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-
-  font-size: 26px;
-  font-weight: 700;
+  gap: 10px;
 
   color: #fdc023;
+
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .logo img {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
 
   border-radius: 50%;
 
   object-fit: cover;
 
-  border: 2px solid rgba(253,192,35,0.25);
+  border: 1px solid rgba(253,192,35,0.25);
 
   box-shadow:
-  0 0 20px rgba(253,192,35,0.18);
-
-  transition: 0.3s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.06);
-
-  box-shadow:
-  0 0 28px rgba(253,192,35,0.28);
+  0 0 12px rgba(253,192,35,0.12);
 }
 
 nav {
@@ -131,7 +125,7 @@ nav a:hover::after {
 .hero {
   position: relative;
 
-  min-height: 70vh;
+  min-height: 62vh;
 
   display: flex;
   align-items: center;
@@ -139,7 +133,7 @@ nav a:hover::after {
 
   text-align: center;
 
-  padding: 0 8%;
+  padding: 60px 8%;
 
   overflow: hidden;
 }
@@ -473,8 +467,10 @@ footer {
 @media (max-width: 768px) {
 
   header {
+    padding: 16px 7%;
+
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
   }
 
   nav {
@@ -488,7 +484,7 @@ footer {
   .hero {
     min-height: auto;
 
-    padding: 120px 7% 80px;
+    padding: 100px 7% 70px;
   }
 
   .hero h1 {
