@@ -483,36 +483,71 @@ nav a:hover::after {
   margin: 20px auto 35px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 
 /* =========================
    SOCIAL LINKS
 ========================= */
 
-.social-links {
+/* =========================
+   FOOTER SOCIALS
+========================= */
+
+.footer-socials {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  align-items: center;
+  gap: 16px;
 
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+
+  flex-wrap: wrap;
 }
 
-.social-links a {
+.footer-socials span {
   color: #bdbdbd;
 
-  text-decoration: none;
-
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
+
+  margin-right: 8px;
+}
+
+.footer-socials a {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  color: #d6d6d6;
+
+  text-decoration: none;
 
   transition: 0.3s ease;
 }
 
-.social-links a:hover {
+.footer-socials a:hover {
+  transform: translateY(-4px);
+
   color: #fdc023;
+
+  border-color: rgba(253,192,35,0.25);
+
+  box-shadow:
+  0 0 18px rgba(253,192,35,0.12);
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   text-align: center;
