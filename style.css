@@ -252,16 +252,16 @@ nav a:hover::after {
 .services-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(280px, 420px));
+  grid-template-columns: repeat(2, 1fr);
 
-  justify-content: center;
-
-  gap: 28px;
+  gap: 30px;
 
   margin-top: 40px;
 }
 
 .card {
+  width: 100%;
+
   background:
   linear-gradient(145deg, rgba(18,18,18,1), rgba(8,8,8,1));
 
@@ -273,7 +273,7 @@ nav a:hover::after {
 
   transition: 0.4s ease;
 
-  min-height: 240px;
+  min-height: 220px;
 
   display: flex;
   flex-direction: column;
@@ -317,6 +317,8 @@ nav a:hover::after {
 }
 
 .project-card {
+  width: 100%;
+
   background:
   linear-gradient(145deg, rgba(18,18,18,1), rgba(8,8,8,1));
 
@@ -429,10 +431,7 @@ footer {
 
 @media (max-width: 1100px) {
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .services-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
