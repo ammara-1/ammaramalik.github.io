@@ -66,6 +66,15 @@ header {
   text-decoration: none;
 }
 
+.logo,
+.logo:hover,
+.logo:focus,
+.logo:visited {
+  text-decoration: none;
+
+  color: #fdc023;
+}
+
 .logo img {
   width: 40px;
   height: 40px;
