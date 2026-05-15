@@ -486,20 +486,18 @@ nav a:hover::after {
 
 
 /* =========================
-   SOCIAL LINKS
-========================= */
-
-/* =========================
    FOOTER SOCIALS
 ========================= */
 
 .footer-socials {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  gap: 16px;
 
-  margin-bottom: 24px;
+  gap: 14px;
+
+  margin-bottom: 26px;
 
   flex-wrap: wrap;
 }
@@ -507,15 +505,15 @@ nav a:hover::after {
 .footer-socials span {
   color: #bdbdbd;
 
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
 
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .footer-socials a {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
 
   display: flex;
   align-items: center;
@@ -525,13 +523,15 @@ nav a:hover::after {
 
   background: rgba(255,255,255,0.04);
 
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.06);
 
   color: #d6d6d6;
 
+  font-size: 16px;
+
   text-decoration: none;
 
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-socials a:hover {
@@ -541,9 +541,13 @@ nav a:hover::after {
 
   border-color: rgba(253,192,35,0.25);
 
+  background: rgba(253,192,35,0.06);
+
   box-shadow:
-  0 0 18px rgba(253,192,35,0.12);
+  0 0 18px rgba(253,192,35,0.10);
 }
+
+
 
 /* =========================
    FOOTER
