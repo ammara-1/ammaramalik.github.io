@@ -487,6 +487,33 @@ nav a:hover::after {
    FOOTER
 ========================= */
 
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #bdbdbd;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fdc023;
+}
+
 footer {
   text-align: center;
 
