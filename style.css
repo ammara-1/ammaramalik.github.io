@@ -99,36 +99,29 @@ nav a:hover::after {
 .hero {
   position: relative;
 
-  min-height: 62vh;
+  min-height: 80vh;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  text-align: center;
 
   padding: 0 8%;
 
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
+.hero-container {
+  width: 100%;
 
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  width: 500px;
-  height: 500px;
-
-  background: rgba(253,192,35,0.06);
-
-  filter: blur(120px);
-
-  z-index: -1;
+  gap: 60px;
 }
 
 .hero-content {
-  max-width: 850px;
+  flex: 1;
+  max-width: 650px;
 }
 
 .tagline {
@@ -158,9 +151,50 @@ nav a:hover::after {
   font-size: 18px;
   line-height: 1.8;
 
-  max-width: 620px;
+  margin-bottom: 40px;
+}
 
-  margin: 0 auto 40px;
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 430px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  box-shadow:
+  0 0 40px rgba(253,192,35,0.12);
+
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Floating Animation */
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
 }
 
 /* =========================
@@ -169,7 +203,6 @@ nav a:hover::after {
 
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
 }
@@ -431,6 +464,16 @@ footer {
 
 @media (max-width: 1100px) {
 
+  .hero-container {
+    flex-direction: column-reverse;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
   .services-grid,
   .projects-grid {
     grid-template-columns: 1fr;
@@ -453,12 +496,22 @@ footer {
     justify-content: center;
   }
 
+  .hero {
+    min-height: auto;
+
+    padding: 120px 7% 80px;
+  }
+
   .hero h1 {
     font-size: 46px;
   }
 
   .description {
     font-size: 16px;
+  }
+
+  .hero-image img {
+    max-width: 320px;
   }
 
   .section {
