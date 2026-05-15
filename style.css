@@ -517,6 +517,8 @@ footer {
 
   justify-content: space-between;
   align-items: center;
+
+  gap: 20px;
 }
 
 /* =========================
@@ -581,11 +583,11 @@ footer {
 .footer-text {
   color: #8d8d8d;
 
-  font-size: 12px;
+  font-size: 14px;
 
   margin: 0;
 
-  text-align: right;
+  white-space: nowrap;
 }
 
 /* =========================
