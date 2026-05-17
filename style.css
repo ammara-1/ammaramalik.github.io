@@ -527,6 +527,14 @@ overflow: hidden;
   margin: 20px auto 35px;
 }
 
+.contact-email {
+  margin-top: 22px;
+
+  color: #9d9d9d;
+
+  font-size: 14px;
+}
+
 
 /* =========================
    FOOTER
