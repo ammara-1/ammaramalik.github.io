@@ -591,6 +591,20 @@ overflow: hidden;
   font-weight: 500;
 }
 
+.testimonial-desc {
+  max-width: 720px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+
+  color: #b5b5b5;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+}
+
 /* =========================
    CONTACT
 ========================= */
