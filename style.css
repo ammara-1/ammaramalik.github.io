@@ -528,11 +528,6 @@ overflow: hidden;
 }
 
 
-
-/* =========================
-   FOOTER
-========================= */
-
 /* =========================
    FOOTER
 ========================= */
@@ -616,7 +611,7 @@ footer {
 .footer-text {
   color: #6f6f6f;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 400;
 
