@@ -408,6 +408,9 @@ overflow: hidden;
 }
 
 .project-card {
+
+   position: relative;
+   overflow: hidden;
   width: 100%;
 
   background:
