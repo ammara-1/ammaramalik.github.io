@@ -516,6 +516,9 @@ overflow: hidden;
 /* =========================
    TESTIMONIALS
 ========================= */
+.testimonials {
+  text-align: center;
+}
 
 .testimonial-grid {
   display: grid;
