@@ -583,11 +583,13 @@ footer {
 .footer-text {
   color: #6f6f6f;
 
-  font-size: 9px;
+  font-size: 10px;
 
   font-weight: 400;
 
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
+
+  line-height: 1;
 
   margin: 0;
 }
