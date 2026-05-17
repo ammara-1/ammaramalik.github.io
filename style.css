@@ -519,6 +519,7 @@ footer {
   align-items: center;
 
   gap: 20px;
+  flex-direction: row;
 }
 
 /* =========================
@@ -588,6 +589,7 @@ footer {
   margin: 0;
 
   white-space: nowrap;
+   margin-left: auto;
 }
 
 /* =========================
@@ -670,10 +672,5 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
-   .footer-container {
-  flex-direction: column;
-
-  text-align: center;
-}
 
 }
