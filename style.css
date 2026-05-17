@@ -518,8 +518,7 @@ footer {
   justify-content: space-between;
   align-items: center;
 
-  gap: 20px;
-  flex-direction: row;
+  gap: 40px;
 }
 
 /* =========================
@@ -567,7 +566,7 @@ footer {
 }
 
 .footer-socials a:hover {
-  transform: translateY(-4px);
+  transform: translateY(1px);
 
   color: #fdc023;
 
@@ -582,14 +581,21 @@ footer {
 /* Footer Text */
 
 .footer-text {
-  color: #8d8d8d;
+  color: #7d7d7d;
 
-  font-size: 12px;
+  font-size: 11px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.3px;
 
   margin: 0;
 
+  margin-left: auto;
+
   white-space: nowrap;
-   margin-left: auto;
+
+  line-height: 1;
 }
 
 /* =========================
