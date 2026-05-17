@@ -503,7 +503,7 @@ nav a:hover::after {
 footer {
   width: 100%;
 
-  padding: 28px 8%;
+  padding: 34px 8%;
 
   border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -566,7 +566,7 @@ footer {
 }
 
 .footer-socials a:hover {
-  transform: translateY(1px);
+  transform: translateY(-1px);
 
   color: #fdc023;
 
