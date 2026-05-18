@@ -40,7 +40,7 @@ header {
 
   padding: 18px 8%;
 
-  position: sticky;
+  position: relative;
   top: 0;
 
   background: rgba(0,0,0,0.90);
