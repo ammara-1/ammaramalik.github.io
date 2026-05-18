@@ -6,3 +6,11 @@ const mobileNav = document.getElementById('mobile-nav');
 menuToggle.addEventListener('click', () => {
   mobileNav.classList.toggle('active');
 });
+
+document.querySelectorAll('#mobile-nav a').forEach(link => {
+
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+  });
+
+});
