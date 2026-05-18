@@ -11,7 +11,7 @@
 html {
   scroll-behavior: smooth;
      overflow-x: hidden;
-    scroll-padding-top: 120px;
+    scroll-padding-top: 90px;
 
 }
 
@@ -313,7 +313,7 @@ nav a:hover::after {
 ========================= */
 
 section {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 100px;
 }
 
 .section {
@@ -850,31 +850,51 @@ footer {
 
 @media (max-width: 768px) {
 
+  /* =========================
+   MOBILE NAVBAR
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  font-size: 22px;
+
+  color: #fdc023;
+
+  cursor: pointer;
+
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
   }
 
   header {
     position: relative;
+
+    padding: 22px 7%;
   }
 
   nav {
     position: absolute;
 
-    top: 78px;
-    right: 0;
+    top: 72px;
+    right: 7%;
 
-    width: 220px;
+    width: 210px;
 
-    background: rgba(10,10,10,0.98);
+    background: rgba(10,10,10,0.96);
 
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
 
     border: 1px solid rgba(255,255,255,0.05);
 
     border-radius: 18px;
 
-    padding: 24px;
+    padding: 22px;
 
     display: none;
 
@@ -884,6 +904,9 @@ footer {
 
     gap: 18px;
 
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.45);
+
     z-index: 1000;
   }
 
@@ -892,9 +915,18 @@ footer {
   }
 
   nav a {
+    width: 100%;
+
     font-size: 15px;
 
-    width: 100%;
+    padding-bottom: 6px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.04);
+  }
+
+  nav a:last-child {
+    border-bottom: none;
   }
 
 }
