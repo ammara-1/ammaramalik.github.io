@@ -575,14 +575,47 @@ overflow: hidden;
   text-align: center;
 }
 
-.testimonial-grid {
-  display: grid;
+/* =========================
+   TESTIMONIAL SLIDER
+========================= */
 
-  grid-template-columns: repeat(3, 1fr);
+.testimonial-slider {
+  overflow: hidden;
+
+  position: relative;
+
+  margin-top: 50px;
+}
+
+.testimonial-track {
+  display: flex;
 
   gap: 24px;
 
-  margin-top: 40px;
+  width: max-content;
+
+  animation:
+  scrollTestimonials 28s linear infinite;
+}
+
+/* Pause on Hover */
+
+.testimonial-slider:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* Animation */
+
+@keyframes scrollTestimonials {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
 }
 
 .testimonial-card {
