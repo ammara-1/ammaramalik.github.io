@@ -48,7 +48,7 @@ header {
 
   backdrop-filter: blur(12px);
 
-  z-index: 1000;
+ z-index: 3000;
 
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
@@ -724,7 +724,8 @@ footer {
 
     cursor: pointer;
 
-    z-index: 2001;
+  z-index: 999;
+
   }
 
   /* Fullscreen Nav */
@@ -755,12 +756,15 @@ footer {
   visibility: hidden;
 
   transition: 0.35s ease;
+
+   pointer-events: none;
 }
 
 nav.active {
   opacity: 1;
 
   visibility: visible;
+    pointer-events: auto;
 }
 
   /* Active Menu */
