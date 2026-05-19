@@ -710,52 +710,81 @@ footer {
     display: block;
   }
 
-  nav {
-  position: absolute;
+  /* =========================
+   FULLSCREEN MOBILE MENU
+========================= */
 
-  top: 68px;
+.menu-toggle {
+  display: block;
 
-  right: 8px;
+  font-size: 30px;
 
-  width: 155px;
+  color: #fdc023;
 
-    background: rgba(10,10,10,0.98);
+  cursor: pointer;
 
-    backdrop-filter: blur(14px);
+  z-index: 2001;
+}
 
-    border: 1px solid rgba(255,255,255,0.05);
+/* Fullscreen Nav */
 
-    border-radius: 20px;
+nav {
+  position: fixed;
 
-    padding: 16px 18px;
+  top: 0;
+  right: -100%;
 
-    display: none;
+  width: 100%;
+  height: 100vh;
 
-    flex-direction: column;
+  background: rgba(0,0,0,0.98);
 
-    align-items: flex-start;
+  backdrop-filter: blur(12px);
 
-    gap: 10px;
+  display: flex;
 
-    z-index: 1000;
+  flex-direction: column;
 
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.45);
-  }
+  justify-content: center;
 
-  nav.active {
-    display: flex;
-  }
+  align-items: center;
 
-  nav a {
-    width: 100%;
+  gap: 34px;
 
-    padding-bottom: 10px;
+  transition: 0.5s ease;
 
-    border-bottom:
-    1px solid rgba(255,255,255,0.04);
-  }
+  z-index: 2000;
+}
 
+/* Active */
+
+nav.active {
+  right: 0;
+}
+
+/* Nav Links */
+
+nav a {
+  font-size: 28px;
+
+  font-weight: 500;
+
+  color: white;
+
+  border: none;
+
+  padding: 0;
+}
+
+nav a::after {
+  display: none;
+}
+
+nav a:hover {
+  color: #fdc023;
+}
+
+  
   nav a:last-child {
     border-bottom: none;
   }
