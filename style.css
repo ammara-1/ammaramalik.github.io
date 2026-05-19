@@ -285,9 +285,6 @@ nav a:hover::after {
    SECTIONS
 ========================= */
 
-section {
-  scroll-margin-top: 70px;
-}
 
 .section {
   padding: 80px 8%;
