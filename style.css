@@ -10,8 +10,8 @@
 
 html {
   scroll-behavior: smooth;
+
   overflow-x: hidden;
-  scroll-padding-top: 90px;
 }
 
 body {
@@ -286,7 +286,7 @@ nav a:hover::after {
 ========================= */
 
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 70px;
 }
 
 .section {
