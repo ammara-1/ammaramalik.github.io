@@ -729,7 +729,11 @@ footer {
     position: fixed;
 
     top: 0;
-    right: -100%;
+    opacity: 0;
+
+   visibility: hidden;
+
+   pointer-events: none;
 
     width: 100%;
     height: 100vh;
@@ -756,14 +760,20 @@ footer {
     transition: 0.5s ease;
 
     z-index: 2000;
+     transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
   }
 
   /* Active Menu */
 
   nav.active {
-    right: 0;
-  }
+  opacity: 1;
 
+  visibility: visible;
+
+  pointer-events: auto;
+}
   /* Nav Links */
 
   nav a {
