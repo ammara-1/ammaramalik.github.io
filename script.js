@@ -1,3 +1,15 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
+window.addEventListener('load', () => {
+
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 100);
+
+});
+
 console.log("Portfolio Website Loaded Successfully");
 const menuToggle = document.getElementById('menu-toggle');
 
