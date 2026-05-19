@@ -749,22 +749,30 @@ footer {
 
   gap: 22px;
 
-  z-index: 2000;
+  z-index: 999;
 
   opacity: 0;
 
   visibility: hidden;
 
-  transition: 0.35s ease;
+  pointer-events: none;
 
-   pointer-events: none;
+  transform: translateY(-20px);
+
+  transition:
+  opacity 0.35s ease,
+  transform 0.35s ease,
+  visibility 0.35s ease;
 }
 
 nav.active {
   opacity: 1;
 
   visibility: visible;
-    pointer-events: auto;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
 }
 
   /* Active Menu */
@@ -773,6 +781,14 @@ nav.active {
   opacity: 1;
 
   visibility: visible;
+}
+
+   header nav {
+  display: none;
+}
+
+header nav.active {
+  display: flex;
 }
   /* Nav Links */
 
