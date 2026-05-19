@@ -711,13 +711,13 @@ footer {
   }
 
   nav {
-    position: absolute;
+  position: absolute;
 
-    top: 78px;
+  top: 74px;
 
-    right: 20px;
+  right: 8px;
 
-    width: 170px;
+  width: 155px;
 
     background: rgba(10,10,10,0.98);
 
