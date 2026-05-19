@@ -706,88 +706,81 @@ footer {
     height: 52px;
   }
 
+  /* =========================
+     FULLSCREEN MOBILE MENU
+  ========================= */
+
   .menu-toggle {
     display: block;
+
+    font-size: 30px;
+
+    color: #fdc023;
+
+    cursor: pointer;
+
+    z-index: 2001;
   }
 
-  /* =========================
-   FULLSCREEN MOBILE MENU
-========================= */
+  /* Fullscreen Nav */
 
-.menu-toggle {
-  display: block;
+  nav {
+    position: fixed;
 
-  font-size: 30px;
+    top: 0;
+    right: -100%;
 
-  color: #fdc023;
+    width: 100%;
+    height: 100vh;
 
-  cursor: pointer;
+    background: rgba(0,0,0,0.98);
 
-  z-index: 2001;
-}
+    backdrop-filter: blur(12px);
 
-/* Fullscreen Nav */
+    display: flex;
 
-nav {
-  position: fixed;
+    flex-direction: column;
 
-  top: 0;
-  right: -100%;
+    justify-content: center;
 
-  width: 100%;
-  height: 100vh;
+    align-items: center;
 
-  background: rgba(0,0,0,0.98);
+    gap: 34px;
 
-  backdrop-filter: blur(12px);
+    transition: 0.5s ease;
 
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 34px;
-
-  transition: 0.5s ease;
-
-  z-index: 2000;
-}
-
-/* Active */
-
-nav.active {
-  right: 0;
-}
-
-/* Nav Links */
-
-nav a {
-  font-size: 28px;
-
-  font-weight: 500;
-
-  color: white;
-
-  border: none;
-
-  padding: 0;
-}
-
-nav a::after {
-  display: none;
-}
-
-nav a:hover {
-  color: #fdc023;
-}
-
-  
-  nav a:last-child {
-    border-bottom: none;
+    z-index: 2000;
   }
+
+  /* Active Menu */
+
+  nav.active {
+    right: 0;
+  }
+
+  /* Nav Links */
+
+  nav a {
+    font-size: 28px;
+
+    font-weight: 500;
+
+    color: white;
+
+    border: none;
+
+    padding: 0;
+  }
+
+  nav a::after {
+    display: none;
+  }
+
+  nav a:hover {
+    color: #fdc023;
+  }
+
+  /* Hero */
 
   .hero {
     padding: 100px 7% 70px;
@@ -800,6 +793,8 @@ nav a:hover {
   .description {
     font-size: 16px;
   }
+
+  /* Sections */
 
   .section {
     padding: 60px 7%;
