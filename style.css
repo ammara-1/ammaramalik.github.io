@@ -741,11 +741,13 @@ footer {
 
     flex-direction: column;
 
-    justify-content: center;
+   justify-content: flex-start;
+
+   padding-top: 180px;
 
     align-items: center;
 
-    gap: 26px;
+    gap: 22px;
 
     transition: 0.5s ease;
 
@@ -770,6 +772,10 @@ footer {
     border: none;
 
     padding: 0;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
   }
 
   nav a::after {
