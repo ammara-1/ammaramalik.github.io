@@ -21,6 +21,8 @@ menuToggle.addEventListener('click', () => {
 
   mobileNav.classList.toggle('active');
 
+  document.body.classList.toggle('menu-open');
+
   if (mobileNav.classList.contains('active')) {
 
     icon.classList.remove('fa-bars');
@@ -42,9 +44,13 @@ document.querySelectorAll('#mobile-nav a').forEach(link => {
 
     mobileNav.classList.remove('active');
 
+    document.body.classList.remove('menu-open');
+
     icon.classList.remove('fa-xmark');
     icon.classList.add('fa-bars');
 
   });
+
+});
 
 });
