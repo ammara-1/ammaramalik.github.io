@@ -713,7 +713,7 @@ footer {
   nav {
   position: absolute;
 
-  top: 74px;
+  top: 68px;
 
   right: 8px;
 
@@ -727,7 +727,7 @@ footer {
 
     border-radius: 20px;
 
-    padding: 22px;
+    padding: 16px 18px;
 
     display: none;
 
@@ -735,7 +735,7 @@ footer {
 
     align-items: flex-start;
 
-    gap: 18px;
+    gap: 10px;
 
     z-index: 1000;
 
