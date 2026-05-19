@@ -877,19 +877,18 @@ header {
     display: block;
   }
 
+ @media (max-width: 768px) {
+
   nav {
     position: absolute;
 
-    top: 78px;
-    right: 7%;
+    top: 72px;
 
-    width: 180px;
+    right: 20px;
+
+    width: 165px;
 
     background: rgba(8,8,8,0.98);
-
-    backdrop-filter: blur(14px);
-
-    border: 1px solid rgba(255,255,255,0.05);
 
     border-radius: 18px;
 
@@ -899,15 +898,12 @@ header {
 
     flex-direction: column;
 
-    align-items: flex-start;
-
     gap: 18px;
 
     z-index: 1000;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.45);
   }
+
+} 
 
   nav.active {
     display: flex;
