@@ -857,10 +857,34 @@ header {
    MOBILE NAVBAR
 ========================= */
 
-.menu-toggle {
-  display: none;
+header {
+  display: flex;
 
-  font-size: 26px;
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px 7%;
+
+  position: relative;
+}
+
+/* Logo */
+
+.logo img {
+  width: 52px;
+
+  height: 52px;
+
+  object-fit: cover;
+}
+
+/* Hamburger */
+
+.menu-toggle {
+  display: block;
+
+  font-size: 28px;
 
   color: #fdc023;
 
@@ -869,61 +893,58 @@ header {
   z-index: 1002;
 }
 
-/* Mobile */
+/* Dropdown */
 
-@media (max-width: 768px) {
+nav {
+  position: absolute;
 
-  .menu-toggle {
-    display: block;
-  }
+  top: 78px;
 
- @media (max-width: 768px) {
+  right: 20px;
 
-  nav {
-    position: absolute;
+  width: 170px;
 
-    top: 72px;
+  background: rgba(10,10,10,0.98);
 
-    right: 20px;
+  backdrop-filter: blur(14px);
 
-    width: 165px;
+  border: 1px solid rgba(255,255,255,0.05);
 
-    background: rgba(8,8,8,0.98);
+  border-radius: 20px;
 
-    border-radius: 18px;
+  padding: 22px;
 
-    padding: 20px;
+  display: none;
 
-    display: none;
+  flex-direction: column;
 
-    flex-direction: column;
+  align-items: flex-start;
 
-    gap: 18px;
+  gap: 18px;
 
-    z-index: 1000;
-  }
+  z-index: 1000;
 
-} 
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.45);
+}
 
-  nav.active {
-    display: flex;
-  }
+nav.active {
+  display: flex;
+}
 
-  nav a {
-    font-size: 15px;
+nav a {
+  width: 100%;
 
-    width: 100%;
+  font-size: 15px;
 
-    padding-bottom: 8px;
+  padding-bottom: 10px;
 
-    border-bottom:
-    1px solid rgba(255,255,255,0.04);
-  }
+  border-bottom:
+  1px solid rgba(255,255,255,0.04);
+}
 
-  nav a:last-child {
-    border-bottom: none;
-  }
-
+nav a:last-child {
+  border-bottom: none;
 }
   .hero {
     min-height: auto;
