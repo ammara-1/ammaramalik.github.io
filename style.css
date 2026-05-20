@@ -732,8 +732,7 @@ footer {
   }
 
   /* Fullscreen Nav */
-
-  nav {
+nav {
   position: fixed;
 
   top: 0;
@@ -743,8 +742,6 @@ footer {
   height: 100vh;
 
   background: rgba(0,0,0,0.98);
-
-  backdrop-filter: blur(12px);
 
   display: flex;
 
@@ -758,8 +755,6 @@ footer {
 
   gap: 18px;
 
-  z-index: 999;
-
   opacity: 0;
 
   visibility: hidden;
@@ -767,19 +762,17 @@ footer {
   pointer-events: none;
 
   transition: 0.35s ease;
+
+  z-index: 999;
 }
 
- /* Active Menu */
 nav.active {
   opacity: 1;
 
   visibility: visible;
 
   pointer-events: auto;
-
-  transform: translateY(0);
 }
-
  
 
 
