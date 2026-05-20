@@ -721,10 +721,10 @@ footer {
   .menu-toggle {
   display: block;
 
-  position: fixed;
+position: absolute;
 
-  top: 30px;
-  right: 24px;
+  top: 22px;
+  right: 22px;
 
   font-size: 32px;
 
@@ -733,8 +733,7 @@ footer {
   cursor: pointer;
 
   z-index: 3001;
-
-  transition: 0.3s ease;
+transition: 0.3s ease;
 }
 
    .menu-toggle:hover {
