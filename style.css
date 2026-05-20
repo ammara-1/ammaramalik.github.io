@@ -865,9 +865,10 @@ nav.active {
     padding: 100px 7% 70px;
   }
 
-  .hero h1 {
-    font-size: 46px;
-  }
+ .hero h1 {
+  font-size: 38px;
+  line-height: 1.05;
+}
 
   .description {
     font-size: 16px;
