@@ -743,11 +743,13 @@ footer {
 
   flex-direction: column;
 
-  justify-content: center;
+  justify-content: flex-start;
+
+   padding-top: 120px;
 
   align-items: center;
 
-  gap: 22px;
+  gap: 18px;
 
   z-index: 999;
 
