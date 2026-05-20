@@ -719,17 +719,27 @@ footer {
   ========================= */
 
   .menu-toggle {
-    display: block;
+  display: block;
 
-    font-size: 30px;
+  position: fixed;
 
-    color: #fdc023;
+  top: 30px;
+  right: 24px;
 
-    cursor: pointer;
+  font-size: 32px;
 
-  z-index: 999;
+  color: #fdc023;
 
-  }
+  cursor: pointer;
+
+  z-index: 3001;
+
+  transition: 0.3s ease;
+}
+
+   .menu-toggle:hover {
+  transform: scale(1.08);
+}
 
   /* Fullscreen Nav */
 nav {
