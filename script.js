@@ -53,4 +53,3 @@ document.querySelectorAll('#mobile-nav a').forEach(link => {
 
 });
 
-});
