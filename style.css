@@ -1257,3 +1257,19 @@ header {
     filter: none;
   }
 }
+
+/* Keep card links aligned at the bottom of each row */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .project-tag,
+.project-card .project-link {
+  align-self: flex-start;
+}
+
+.project-card .project-link {
+  margin-top: auto;
+}
