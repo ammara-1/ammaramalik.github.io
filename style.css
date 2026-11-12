@@ -1029,11 +1029,11 @@ header {
 
   animation:
     heroUp 0.9s cubic-bezier(.2,.8,.2,1) 0.3s forwards,
-    shimmer 7s ease-in-out 1.5s infinite;
+    shimmer 3.8s ease-in-out 1s infinite;
 }
 
 @keyframes shimmer {
-  0%, 60% { background-position: 100% 0; }
+  0%, 26% { background-position: 100% 0; }
   100%    { background-position: -50% 0; }
 }
 
@@ -1272,4 +1272,286 @@ header {
 
 .project-card .project-link {
   margin-top: auto;
+}
+
+/* =========================
+   PROJECT SCREENSHOTS
+========================= */
+
+.project-thumb {
+  display: block;
+
+  margin: -12px -12px 26px;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.07);
+
+  background: #0b0b0b;
+
+  text-decoration: none;
+
+  transform: translateZ(20px);
+
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover .project-thumb {
+  border-color: rgba(253,192,35,0.35);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 24px rgba(253,192,35,0.10);
+}
+
+/* Fake browser bar */
+
+.thumb-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 9px 12px;
+
+  background: #151515;
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.thumb-bar span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #3a3a3a;
+}
+
+.thumb-bar span:nth-child(1) { background: #ff5f57; }
+.thumb-bar span:nth-child(2) { background: #febc2e; }
+.thumb-bar span:nth-child(3) { background: #28c840; }
+
+.thumb-bar em {
+  flex: 1;
+
+  margin-left: 10px;
+
+  padding: 3px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: #8d8d8d;
+
+  font-size: 11px;
+  font-style: normal;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.thumb-media {
+  position: relative;
+
+  aspect-ratio: 900 / 427;
+
+  overflow: hidden;
+}
+
+.thumb-media img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+
+  display: block;
+
+  transition: transform 0.9s cubic-bezier(.2,.8,.2,1), filter 0.6s ease;
+
+  filter: saturate(0.92);
+}
+
+.project-card:hover .thumb-media img {
+  transform: scale(1.06);
+  filter: saturate(1.05);
+}
+
+/* "Visit site" overlay on hover */
+
+.thumb-media::after {
+  content: 'Visit site ↗';
+
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  padding: 6px 14px;
+
+  border-radius: 30px;
+
+  background: rgba(0,0,0,0.75);
+
+  border: 1px solid rgba(253,192,35,0.4);
+
+  color: #fdc023;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.project-card:hover .thumb-media::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Placeholder until a screenshot is added */
+
+.thumb-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  background:
+    radial-gradient(circle at 30% 20%, rgba(253,192,35,0.18), transparent 55%),
+    radial-gradient(circle at 80% 90%, rgba(253,192,35,0.08), transparent 50%),
+    linear-gradient(145deg, #161616, #080808);
+}
+
+.thumb-placeholder strong {
+  color: #fdc023;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.thumb-placeholder small {
+  color: #8a8a8a;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+/* Tech tags */
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  list-style: none;
+
+  margin: -8px 0 26px;
+}
+
+.tech-tags li {
+  padding: 4px 12px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.03);
+
+  color: #a9a9a9;
+
+  font-size: 12px;
+}
+
+.project-card .tech-tags + .project-link {
+  margin-top: auto;
+}
+
+/* The tag pill is now below the screenshot */
+
+.project-card .project-tag {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+  .project-thumb {
+    margin: -8px -8px 22px;
+  }
+}
+
+/* Full-page screenshots: scroll through the page on hover */
+
+.thumb-scroll img {
+  object-fit: cover;
+  object-position: 50% 0%;
+
+  transition:
+    object-position var(--scroll-time, 6s) ease-in-out,
+    filter 0.6s ease;
+}
+
+.project-card:hover .thumb-scroll img {
+  transform: none;
+  object-position: 50% 100%;
+}
+
+/* Scroll back up a little faster when the mouse leaves */
+
+.project-card:not(:hover) .thumb-scroll img {
+  transition:
+    object-position 1.2s ease-in-out,
+    filter 0.6s ease;
+}
+
+/* Hint that it scrolls */
+
+.thumb-scroll::after {
+  content: 'Hover to scroll ↓';
+}
+
+.project-card:hover .thumb-scroll::after {
+  content: 'Visit site ↗';
+}
+
+/* Touch screens: scroll gently on their own so the full page is seen */
+
+@media (hover: none) {
+  .thumb-scroll img {
+    animation: thumbAutoScroll var(--scroll-time, 6s) ease-in-out 1s infinite alternate;
+  }
+}
+
+@keyframes thumbAutoScroll {
+  from { object-position: 50% 0%; }
+  to   { object-position: 50% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thumb-scroll img { animation: none !important; }
+}
+
+/* Three-across grids for brands and client sites */
+
+.clients-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1100px) {
+  .products-grid,
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
 }
