@@ -1526,17 +1526,29 @@ header {
   content: 'Visit site ↗';
 }
 
-/* Touch screens: scroll gently on their own so the full page is seen */
+/* Touch screens: the preview scrolls on its own ONLY while the card is on screen.
+   It holds on the top of the page first, scrolls slowly, holds at the bottom,
+   then scrolls back. script.js adds .is-visible when the card is in view. */
 
 @media (hover: none) {
   .thumb-scroll img {
-    animation: thumbAutoScroll var(--scroll-time, 6s) ease-in-out 1s infinite alternate;
+    animation: thumbAutoScroll var(--scroll-time, 6s) ease-in-out infinite alternate;
+    animation-play-state: paused;
+  }
+
+  .thumb-scroll.is-visible img {
+    animation-play-state: running;
+  }
+
+  /* No "hover" on phones: show a tap hint instead */
+  .thumb-scroll::after {
+    content: 'Tap to visit ↗';
   }
 }
 
 @keyframes thumbAutoScroll {
-  from { object-position: 50% 0%; }
-  to   { object-position: 50% 100%; }
+  0%, 12%   { object-position: 50% 0%; }
+  88%, 100% { object-position: 50% 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
