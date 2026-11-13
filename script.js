@@ -124,6 +124,18 @@ document.querySelectorAll('#mobile-nav a').forEach(link => {
     headings.forEach(el => observer.observe(el));
   }
 
+  /* Touch screens: only scroll the website previews while they are on screen */
+
+  if (!finePointer && !reduceMotion && 'IntersectionObserver' in window) {
+    const previewObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.thumb-scroll').forEach(el => previewObserver.observe(el));
+  }
+
   if (reduceMotion || !finePointer) return;
 
   /* 3D tilt + spotlight on cards */
